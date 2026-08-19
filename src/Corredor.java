@@ -44,7 +44,7 @@ public class Corredor extends Deportista{
                 '}';
     }
 public double calcularVelocidad () {
-        return distancia/horasEntranamiento
+        return distancia/horasEntranamiento;
 }
 @Override
     public double calcularRendimiento () {
