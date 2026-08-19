@@ -6,6 +6,10 @@ public class Ciclista extends Deportista{
     public Ciclista() {
     }
 
+    public Ciclista(String nombre, int edad, String pais, int horasEntrenamiento) {
+        super(nombre, edad, pais, horasEntrenamiento);
+    }
+
     public Ciclista(double distancia, double tiempo, double desnivel) {
         this.distancia = distancia;
         this.tiempo = tiempo;
@@ -44,13 +48,16 @@ public class Ciclista extends Deportista{
                 ", desnivel=" + desnivel +
                 '}';
     }
-public  double calcularVelocidad () {
+
+    @Override
+    public double calcularRendimiento() {
+        double velocidad = calcularVelocidad();
+        return (velocidad*horasEntrenamiento)+(desnivel/100);
+    }
+
+    public  double calcularVelocidad () {
         return distancia/tiempo;
 }
 
-@Override
-    public double calcularRendimiento(){
-        double velocidad = calcularVelocidad();
-        return (velocidad*horasEntrenamiento)+(desnivel/100);
-}
+
 }

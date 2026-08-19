@@ -61,4 +61,6 @@ public abstract class Deportista {
         System.out.println( "Pais"+ pais);
         System.out.println( "Horas de entrenamiento"+ horasEntrenamiento);
     }
+
+    public abstract double calcularRendimiento();
 }
